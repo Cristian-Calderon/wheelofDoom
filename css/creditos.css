@@ -1,0 +1,24 @@
+.creditos{
+    background-color:#079444;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.styleList{
+    margin-top: 5%;
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 2;
+}
+.ullist{
+    list-style-type: none;
+}
+.piramidecreditos{
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+}
+
