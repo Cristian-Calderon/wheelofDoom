@@ -1,0 +1,394 @@
+svg {
+	border: 1px solid red;
+	width: 100%;
+    height: auto;
+}
+
+/* ============================= 
+=         HOME PAGE             =
+================================*/
+
+
+
+
+/* ============================= 
+=          MAIN PAGE           =
+================================*/
+
+/* VICTIMA */   
+/*vivo */
+#victima #brazo-derecho {
+	opacity: 0;
+}
+
+#victima #parpado {
+	opacity: 0;
+	transform: translate(-0.5rem, 1rem);
+}
+
+#victima #brazo-derecho-ext {
+	-webkit-animation: brazo-derecho-ext 0.6s alternate infinite;
+	animation: brazo-derecho-ext 0.6s alternate infinite;
+	transform-origin: 1rem 26rem;
+	transform-box: fill-box;
+}
+
+#victima #brazo-izquierdo {
+	-webkit-animation: brazo-derecho-ext 0.7s alternate infinite;
+	animation: brazo-derecho-ext 0.7s alternate infinite;
+	transform-origin: 0rem 0rem;
+	transform-box: fill-box;
+}
+
+#victima #pierna-izquierda {
+	-webkit-animation: brazo-derecho-ext 0.9s alternate infinite;
+
+	animation: brazo-derecho-ext 0.9s alternate infinite;
+	transform-origin: 3rem 16rem;
+	transform-box: fill-box;
+}
+
+#victima #pierna-izquierda #pie {
+	-webkit-animation: brazo-derecho-ext 0.7s alternate infinite;
+	animation: brazo-derecho-ext 0.7s alternate infinite;
+	transform-origin: 8rem 9rem;
+	transform-box: fill-box;
+}
+
+#victima #pierna-derecha {
+	-webkit-animation: brazo-derecho-ext 0.9s alternate infinite;
+	animation: brazo-derecho-ext 0.9s alternate infinite;
+	transform-origin: 0rem 16rem;
+	transform-box: fill-box;
+}
+
+#victima #cabeza-safrificado {
+	-webkit-animation: brazo-derecho-ext 0.6s alternate infinite 1s;
+	animation: brazo-derecho-ext 0.6s alternate infinite 1s;
+	transform-origin: right 5rem;
+	transform-box: fill-box;
+}
+
+#victima #pelo {
+	-webkit-animation: pelo 1s alternate infinite;
+	animation: pelo 1s alternate infinite;
+	transform-origin: right top;
+	transform-box: fill-box;
+}
+#victima #ojo-abierto {
+	-webkit-animation: ojo-open 0.3s alternate infinite;
+	animation: ojo-open 0.3s alternate infinite;
+}
+#victima #pupila {
+	-webkit-animation: pelo 0.3s alternate infinite;
+	animation: pelo 0.3s alternate infinite;
+	transform-origin: 0 -4rem;
+	transform-box: fill-box;
+}
+/*boca*/
+#victima #ouch {
+	-webkit-animation: ojo-open 0.2s ease-in-out alternate infinite;
+	animation: ojo-open 0.2s ease-in-out alternate infinite;
+}
+
+/* sangre*/
+#victima #pecho-rojo,
+#victima #salpicadura {
+	opacity: 0;
+}
+
+#victima #piedra-sangre #corto,
+#victima #piedra-sangre #largo,
+#victima #sangre-splash {
+	opacity: 0;
+}
+
+/*muerto*/
+#victima.dead #brazo-derecho {
+	transition: opacity 0.2s ease-in;
+	opacity: 1;
+}
+
+#victima.dead #brazo-derecho-ext {
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+	opacity: 0;
+}
+
+#victima.dead #brazo-izquierdo,
+#victima.dead #pierna-izquierda,
+#victima.dead #pierna-izquierda #pie,
+#victima.dead #pierna-derecha {
+	-webkit-animation-play-state: paused;
+	animation-play-state: paused;
+}
+
+#victima.dead #cabeza-safrificado {
+	-webkit-animation: cabezaMuerta 0.6s linear 1;
+	animation: cabezaMuerta 0.6s linear 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+#victima.dead #pelo {
+	-webkit-animation: pelo 2s alternate infinite;
+	animation: pelo 2s alternate infinite;
+	transform-origin: right top 29rem;
+}
+
+#victima.dead #ojo-abierto {
+	-webkit-animation: ojo-open 0.3s linear 1;
+	animation: ojo-open 0.3s linear 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+#victima.dead #pupila {
+	animation-direction: reverse;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+	transform-origin: 9rem 5rem;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+#victima.dead #parpado {
+	-webkit-animation: ojo-cierra 2s linear 1.9s;
+	animation: ojo-cierra 2s linear 1.9s;
+	transform-origin: center center;
+	transform-box: fill-box;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+#victima.dead #ouch {
+	-webkit-animation: bocaDead 2s ease-in-out 1;
+	animation: bocaDead 2s ease-in-out 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+/* sangre */
+
+#victima.dead #pecho-rojo {
+	-webkit-animation: ojo-open 0.4s ease-in-out 1 0.1s;
+	animation: ojo-open 0.4s ease-in-out 1 0.1s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+#victima.dead #salpicadura {
+	transform-box: fill-box;
+	transform-origin: 19rem 17rem;
+	-webkit-animation: chorroDsangre 1s linear infinite 0.4s;
+	animation: chorroDsangre 1s linear infinite 0.4s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+#victima.dead #sangre-splash {
+	-webkit-animation: ojo-open 0.3s linear 0.2s 1;
+	animation: ojo-open 0.3s linear 0.2s 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+#victima.dead #piedra-sangre #largo {
+	-webkit-animation: ojo-open 0.4s ease-in-out 1;
+	animation: ojo-open 0.4s ease-in-out 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+#victima.dead #piedra-sangre #corto {
+	-webkit-animation: ojo-open 0.2s linear 0.3s 1;
+	animation: ojo-open 0.2s linear 0.3s 1;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+/* brazo derecho ext */
+
+@-webkit-keyframes brazo-derecho-ext {
+	0% {
+		transform: rotate(20deg);
+	}
+	100% {
+		transform: rotate(-0.9deg);
+	}
+}
+
+@keyframes brazo-derecho-ext {
+	0% {
+		transform: rotate(20deg);
+	}
+	100% {
+		transform: rotate(-0.9deg);
+	}
+}
+/* animacion de opacidad */
+
+@-webkit-keyframes ojo-open {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes ojo-open {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes bocaDead {
+	0% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	92% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes bocaDead {
+	0% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	92% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes ojo-cierra {
+	0% {
+		opacity: 1;
+		transform: translate(-0.5rem, 1rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0rem, 0rem);
+	}
+}
+
+@keyframes ojo-cierra {
+	0% {
+		opacity: 1;
+		transform: translate(-0.5rem, 1rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0rem, 0rem);
+	}
+}
+
+@-webkit-keyframes pelo {
+	from {
+		transform: rotate(-5deg) translate(-0.1rem, 0.1rem);
+	}
+	to {
+		transform: rotate(0deg) translate(0, 0);
+	}
+}
+
+@keyframes pelo {
+	from {
+		transform: rotate(-5deg) translate(-0.1rem, 0.1rem);
+	}
+	to {
+		transform: rotate(0deg) translate(0, 0);
+	}
+}
+
+/* salpicadura */
+
+@-webkit-keyframes sangre {
+	0% {
+		opacity: 0;
+		transform: rotate(-0.9deg);
+	}
+	100% {
+		opacity: 1;
+		transform: rotate(20deg);
+	}
+}
+
+@keyframes sangre {
+	0% {
+		opacity: 0;
+		transform: rotate(-0.9deg);
+	}
+	100% {
+		opacity: 1;
+		transform: rotate(20deg);
+	}
+}
+
+@-webkit-keyframes chorroDsangre {
+	0% {
+		opacity: 1;
+		transform: rotate(0deg);
+	}
+	27% {
+		opacity: 0.1;
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes chorroDsangre {
+	0% {
+		opacity: 1;
+		transform: rotate(0deg);
+	}
+	27% {
+		opacity: 0.1;
+	}
+	30% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+		transform: rotate(-360deg);
+	}
+}
+
+@-webkit-keyframes cabezaMuerta {
+	from {
+	}
+	to {
+		transform: rotate(-17deg) translate(-2.4rem, 0.9rem);
+	}
+}
+
+@keyframes cabezaMuerta {
+	from {
+	}
+	to {
+		transform: rotate(-17deg) translate(-2.4rem, 0.9rem);
+	}
+}
+
+/* END VICTIMA */
