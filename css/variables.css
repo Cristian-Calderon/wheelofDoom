@@ -1,20 +1,21 @@
 :root {
 
 /* colore */    
---verde: verde;
---rojo: rojo;
---amarillo: amarillo;
---texto: texto;
+--azul:#369BA1;
+--verde: #079444;
+--rojo: #EF1C23;
+--amarillo: #FFCC02;
+--texto: #022913;
 
 /* colore light */
---verde-light: verde;
---rojo-light: rojo;
---amarillo-light: amarillo;
+--verde-light: #83C9A1;
+--rojo-light: #F78D91;
+--amarillo-light: #FFE580;
 
 /* colore dark */
---verde-dark: verde;
---rojo-dark: rojo;
---amarillo-dark: amarillo;
+--verde-dark: #05662F;
+--rojo-dark: #CC181E;
+--amarillo-dark: #CCA302;
 
 /* fuentes */
 
