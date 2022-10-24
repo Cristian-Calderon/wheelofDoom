@@ -3,3 +3,44 @@
 @import url(./theme.css);
 @import url(./animacion.css);
 @import url(./layout.css);
+
+
+main{
+    background-color:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+ul li {
+    background: #cce5ff;
+    color: darkblue;
+    margin: 5px;
+  }
+   
+
+
+#lista-sacrificar{
+    width: 100%;
+    height: 25vh;
+    border: 20px solid transparent;
+    border-image: url(../Assets/Imagenes/border-bottomG.png) 100
+    stretch;
+    background-color: aqua;
+    padding: 20px;
+
+}
+
+#lista-sacrificados{
+    width: 100%;
+    height: 30vh;
+    background-color: royalblue;
+    padding: 15px;
+
+    border: 20px solid transparent;
+ 
+    border-image:  url(../Assets/Imagenes/border-bottomD.png) 100 stretch;
+    
+}
