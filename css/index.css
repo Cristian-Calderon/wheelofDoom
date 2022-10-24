@@ -1,0 +1,56 @@
+.home-green{
+    background-color: #83C9A1;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .home-img{
+    margin-top: 70px;
+    width: 72%;
+}
+
+.home-paragraph{
+    margin: 50px 50px;
+}
+
+.home-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/iconos/stone.jpg');
+    width: 294px;
+    height: 52px;
+    opacity: 90%;
+    border: 10px solid rgba(7, 148, 68, .8);
+}
+
+.home-button div{
+    background-color: rgba(255, 204, 2, 0.5);
+    width: 284px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-button div a{
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+.home-pegi{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.img-pegi{
+    margin-top: 70px;
+    margin-left: 40px;
+    width: 10%;
+}
