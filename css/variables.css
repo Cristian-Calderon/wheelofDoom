@@ -1,0 +1,24 @@
+:root {
+
+/* colore */    
+--verde: verde;
+--rojo: rojo;
+--amarillo: amarillo;
+--texto: texto;
+
+/* colore light */
+--verde-light: verde;
+--rojo-light: rojo;
+--amarillo-light: amarillo;
+
+/* colore dark */
+--verde-dark: verde;
+--rojo-dark: rojo;
+--amarillo-dark: amarillo;
+
+/* fuentes */
+
+--text-display: 'aztecregular', sans-serif;
+--text-body:  'Special Elite', cursive;
+
+}

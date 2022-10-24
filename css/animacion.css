@@ -1,8 +1,21 @@
 svg {
 	border: 1px solid red;
 	width: 100%;
+    height: auto;
 }
 
+/* ============================= 
+=         HOME PAGE             =
+================================*/
+
+
+
+
+/* ============================= 
+=          MAIN PAGE           =
+================================*/
+
+/* VICTIMA */   
 /*vivo */
 #victima #brazo-derecho {
 	opacity: 0;
@@ -377,3 +390,5 @@ svg {
 		transform: rotate(-17deg) translate(-2.4rem, 0.9rem);
 	}
 }
+
+/* END VICTIMA */
