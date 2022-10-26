@@ -17,18 +17,15 @@ const onClickMatar = (e) => {
     // Evento Random
     matar();
     /* //! actualiza el DOM*/
-    render();
+    // render();
 };
 
 const render = () => {  
     //* evento de sacrificio en button kill
     buttonKill.addEventListener( 'click', onClickMatar);
     // Recorrer el Array alumnos
-    // alumnos.forEach((item)=>{
-    //     let li = document.createElement("li");
-    //     li.innerText = item;
-    //     document.getElementById("vivos").appendChild(li);});
-    // console.log("render")
+   
+  
   };
   
 
@@ -61,12 +58,21 @@ const render = () => {
     "Rocío Cejudo Soronellas",
     "Rodrigo Fernández",
     "Teix Garcia",
+    "Alejandro Rodriguez"
   ];
   
-  
+  // meter dentro de la funcion y otra función que borre a los hijos (.children) 
+
+  alumnos.forEach((item)=>{
+    let li = document.createElement("li");
+    li.innerText = item;
+    document.getElementById("vivos").appendChild(li);});
+    console.log (alumnos);
+
+
   const muertos = []; //cada valor que yo le pase a [] va a ser un valor de un array
   //escribe alumnos vivos
-//   document.getElementById("vivos").innerHTML = alumnos;
+  // document.getElementById("vivos").innerHTML = alumnos;
   //funcion a la que se llama desde el boton de añadir
   function add() {
       //agarra valor del input
@@ -89,14 +95,17 @@ const render = () => {
     const aletorio = parseInt(Math.random() * alumnos.length); //demostración quitando parseInt
     console.log(aletorio);
   
-  
     console.log(alumnos[aletorio]);
     //if con dos opciones dependiendo si el array alumnos esta lleno o vacio
+
+   
+
     if (alumnos.length > 0) {
       // mete al muerto (nombre) en el array de muertos
       muertos.push(alumnos[aletorio]);
       // funcion alert con timer externa
         //   animación de alerta de internet (adjunta libreria jss)
+        
       Swal.fire({
         title: alumnos[aletorio],
         html: "MUERTO",
@@ -105,6 +114,7 @@ const render = () => {
       });
       //restador de array
       alumnos.splice(aletorio, 1); 
+
     // Crea elementos lista y añade el alumno
       
       //reescribe alumnos vivos
@@ -115,7 +125,7 @@ const render = () => {
       console.log(muertos);
       }
     else {
-      document.getElementById("vivos").innerHTML = "TAN TOS MUERTOS";
+      // document.getElementById("vivos").innerHTML = "TAN TOS MUERTOS";
       //alerta externa con timer
       Swal.fire({
         title: "A LA FREGADA TODOS",
@@ -123,8 +133,11 @@ const render = () => {
         timerProgressBar: true,
       });
     }
+
   }
 
     
   //! MAIN //
   render()
+
+  
