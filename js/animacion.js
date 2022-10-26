@@ -1,28 +1,48 @@
 // ! variables */
 //* target al nodo button kill
 const buttonKill = document.getElementById('kill');
+const buttonNext = document.getElementById('next');
 
 // ! Handlers */
 //* ejecutar la animación de sacrificio 
 const onClickMatar = (e) => {
 
     //* target victima en la animación
-	const victima = document.getElementById('victima');
-    /* //* añade la clase dead a la victima para iniciar la animación de muerte */
-	victima.classList.add('dead');
+    const victima = document.querySelectorAll(".victima");
+    const asesino = document.querySelectorAll(".sacrificador");
+  
+    // victimas es un array y lo recorro con un forEach
+    victima.forEach((item)=>{item.classList.add('dead');});
 
-    /* cambia el texto del botón */
-    e.target.innerHTML = "Next kill";
+     // Asesino es un array y lo recorro con un forEach
+    asesino.forEach((item)=>{item.classList.add('dead');});
 
     // Evento Random
-    matar();
+  if (muertos.length == 0){
+  matar();
+ };
+
+   
     /* //! actualiza el DOM*/
     render();
 };
 
+//* pasar al siguiente
+const onClickNext = (e) => {
+const claseDead = document.querySelectorAll(".dead");
+if( claseDead.length > 0 ){
+  claseDead.forEach((item)=>{item.classList.remove('dead');});
+  matar();  
+};
+  /* //! actualiza el DOM*/
+  render();
+}
+
+
 const render = () => {  
     //* evento de sacrificio en button kill
     buttonKill.addEventListener( 'click', onClickMatar);
+    buttonNext.addEventListener( 'click', onClickNext);
     // Recorrer el Array alumnos
     // alumnos.forEach((item)=>{
     //     let li = document.createElement("li");
@@ -30,6 +50,9 @@ const render = () => {
     //     document.getElementById("vivos").appendChild(li);});
     // console.log("render")
   };
+
+
+
   
 
 
