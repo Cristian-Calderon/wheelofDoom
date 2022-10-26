@@ -30,9 +30,10 @@ const onClickMatar = (e) => {
 //* pasar al siguiente
 const onClickNext = (e) => {
 const claseDead = document.querySelectorAll(".dead");
-claseDead.forEach((item)=>{item.classList.remove('dead');});
-
-matar();  
+if( claseDead.length > 0 ){
+  claseDead.forEach((item)=>{item.classList.remove('dead');});
+  matar();  
+};
   /* //! actualiza el DOM*/
   render();
 }

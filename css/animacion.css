@@ -1,5 +1,4 @@
 svg {
-	border: 1px solid red;
 	width: 100%;
     height: auto;
 }
@@ -15,12 +14,49 @@ svg {
 =          MAIN PAGE           =
 ================================*/
 
+.pantalla-2{
+	background-color: var(--texto);
+}
+
+.border-aztec{
+	background-color: white;
+	border: 1rem solid transparent;
+   -o-border-image: url(../assets/decorado/border-verde.svg) 130 round;
+      border-image: url(../assets/decorado/border-verde.svg) 130 round;
+}
+
+.pantalla-2 header nav{
+	display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+	margin-bottom: 1rem;
+}
+
+.pantalla-2 header nav button{
+	padding: 1rem 2rem;
+    background-color: var(--verde);
+    text-transform: uppercase;
+    font-family: 'aztecregular';
+    font-size: 1rem;
+    color: var(--amarillo);
+    border: 8px dashed var(--verde-dark);
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+ }
+
+ .pantalla-2 header nav button:hover{
+	background-color: var(--verde-light);
+	border: 8px dashed var(--verde);
+ }
+
+ .pantalla-2 header nav button:active,
+ .pantalla-2 header nav button:focus{
+	background-color: var(--rojo-dark);
+	border: 8px dashed var(--verde);
+ }
+
+
 /* VICTIMA */   
-svg{
-	border: 1px solid red;
-	width:100%;
-  }
-  
   /*vivo */
   .victima #brazo-derecho{
 	opacity:0;
