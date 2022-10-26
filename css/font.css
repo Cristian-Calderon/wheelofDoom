@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Special+Elite&display=swap');
+
+@font-face {
+	font-family: 'aztecregular';
+	src: url('../assets/fonts/aztec-webfont.woff2') format('woff2'), 
+    url('../assets/fonts/aztec-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {    
+	font-family: var(--text-body);
+    font-size: 18px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: var(--text-display);
+}
+
