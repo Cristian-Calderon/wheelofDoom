@@ -1,0 +1,33 @@
+.creditos-container{
+    background-color: var(--verde);
+}
+
+.creditos-lista{
+    list-style: none;
+}
+
+.creditos-main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credito-piramide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credito-piramide img{
+    width: 80%;
+}
+
+.credito-footer{
+    display: flex;
+    align-items: flex-end;
+}
+
+.credito-img{
+    position: absolute;
+}
