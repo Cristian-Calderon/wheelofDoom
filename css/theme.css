@@ -1,3 +1,114 @@
 *{box-sizing: border-box;}
 
 img {width: 100%;}
+
+.animacion{
+    background-color: var(--texto);
+    margin-bottom: 6rem;
+    
+}
+ul {
+    list-style: none;
+    height: 100px;
+    width: 100%;
+    /* list-style-image: url(../Assets/Imagenes/huesos.png); */ 
+    overflow: scroll;
+}
+
+
+li{
+    background-color: var(--amarillo-light);
+    margin-bottom: 1rem;
+}
+
+
+.listas{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;  
+}
+
+   
+.lista-sacrificar{
+   
+    border: 25px solid transparent;
+    border-image: url(../Assets/Imagenes/border-bottomG.png) 100 round;
+    background-color: var(--texto);
+    color:var(--texto);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 5rem;  
+    
+}
+    .tipo{
+        color: var(--amarillo);
+        text-align:center;
+        width: 100%;
+    }
+
+    .add{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+        .lagarto{
+            width: 100px;
+            background:transparent; 
+            color:var(--rojo-dark);
+            font: var(--text-body);
+            border: none;
+        
+         }
+        
+         .lagarto:hover{
+            
+            background-color: var(--amarillo-light);
+         }
+        
+         .matar{
+            background: transparent;
+            color: var(--rojo-dark);
+            font: var(--text-display);
+            font-weight: bold;
+        }
+        .matar:hover{
+            background-color: var(--amarillo-dark);
+        }
+
+
+
+
+
+.lista-sacrificados{
+    background-color: var(--texto);
+    color: var(--rojo-light);
+    border: 30px solid transparent;
+    border-image:  url(../Assets/Imagenes/border-bottomD.png) 100 round;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
+    margin-bottom: 2rem;
+  
+}
+
+.tipo2{
+        color: var(--rojo-light);
+        text-align:center;
+        width: 100%;
+}
+
+
+  .calavera{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: myfirst 5s linear 2s infinite alternate;
+  }
+  
+  @keyframes myfirst {
+    0%   { left:0px; top:0px;}
+    25%  { left:200px; top:0px;}
+    50%  { left:500px; top:0px;}
+    75%  { left:200px; top:0px;}
+    100% { left:0px; top:0px;}
+  }

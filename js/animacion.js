@@ -24,10 +24,10 @@ const render = () => {
     //* evento de sacrificio en button kill
     buttonKill.addEventListener( 'click', onClickMatar);
     // Recorrer el Array alumnos
-    // alumnos.forEach((item)=>{
-    //     let li = document.createElement("li");
-    //     li.innerText = item;
-    //     document.getElementById("vivos").appendChild(li);});
+     alumnos.forEach((item)=>{
+         let li = document.createElement("li");
+         li.innerText = item;
+       document.getElementById("vivos").appendChild(li);});
     // console.log("render")
   };
   
@@ -62,6 +62,7 @@ const render = () => {
     "Rodrigo Fernández",
     "Teix Garcia",
   ];
+
   
   
   const muertos = []; //cada valor que yo le pase a [] va a ser un valor de un array
@@ -77,7 +78,8 @@ const render = () => {
     if(nuevo != ""){
       alumnos.push(nuevo);
       //reescribe alumnos vivos
-    //   document.getElementById("vivos").innerHTML = alumnos;
+     document.getElementById("vivos").innerHTML = alumnos;
+    
     }
     console.log(alumnos)
     

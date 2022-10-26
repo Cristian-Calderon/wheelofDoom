@@ -357,16 +357,26 @@
         </nav>
       </section>
     </header>
-    <main>
-      <section class="container">
-		<ul id ="vivos"></ul>
-
-        <input type="text" id="name" />
-        <button onclick="add()">Añadir</button>
-        <button id= "kill" onclick="matar()">matar</button>
-
-        <h6>muertos</h6>
-        <p id="muertos"></p>
+    <main >
+      <section  class="container">
+	  <div class="listas">
+		<div id="aztecoders-sacrificar" class="lista-sacrificar">
+      <h4 class="tipo">Aztecoders a Sacrificar</h4>
+			<div class="add">
+				<ul id ="vivos"></ul>
+			    <button class="lagarto" onclick="add()">Añadir
+					<img src="./Assets/Imagenes/Lagarto.png"  alt="">
+				</button>
+				<input class="name" type="text" id="name" />
+			    <button id= "kill" class="matar" onclick="matar()">matar</button>	
+			</div>	
+		</div>
+		<div id="aztecoders sacrificados" class="lista-sacrificados">
+      <h4 class="tipo2">Aztecoders Sacrificados</h4>
+			<ol id="muertos" class="muertos"></ol>
+        <img class="calavera" src="./Assets/Imagenes/calavera.png" alt="">
+		</div>
+	   </div>       
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       </section>
     </main>
