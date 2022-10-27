@@ -9,6 +9,12 @@ const listaVivos = document.getElementById('vivos');
 // * target al nodo #add en hmtl
 const buttonAdd = document.getElementById('add');
 
+
+// * lista de muertos
+const ulListaMuertos = document.getElementById("muertos");
+
+let noRepetir;
+
 const muertos = []; //cada valor que yo le pase a [] va a ser un valor de un array
 
 const alumnos = [
@@ -48,7 +54,9 @@ const onClickMatar = (e) => {
 	//* target victima en la animación
 	const victima = document.querySelectorAll('.victima');
 	const asesino = document.querySelectorAll('.sacrificador');
+  const claseDead = document.querySelectorAll('.dead');
 
+  if(claseDead.length == 0) { 	
 	// victimas es un array y lo recorro con un forEach
 	victima.forEach((item) => {
 		item.classList.add('dead');
@@ -58,11 +66,15 @@ const onClickMatar = (e) => {
 	asesino.forEach((item) => {
 		item.classList.add('dead');
 	});
-
+ 
 	// Evento Random
-	matar();
+
+    matar();
+
+  }
+  
 	/* //! actualiza el DOM*/
-	// render();
+	render();
 };
 
 //* pasar al siguiente
@@ -73,6 +85,8 @@ const onClickNext = (e) => {
 		claseDead.forEach((item) => {
 			item.classList.remove('dead');
 		});
+
+    
 	}
 	/* //! actualiza el DOM*/
 	// render();
@@ -138,23 +152,6 @@ const onClickAdd = (e) => {
 	}
 };
 
-const render = () => {
-	//* evento de sacrificio en button kill
-	buttonKill.addEventListener('click', onClickMatar);
-	buttonNext.addEventListener('click', onClickNext);
-
-	//* evento de añadir con el button add
-	buttonAdd.addEventListener('click', onClickAdd);
-	// Recorrer el Array alumnos
-
-	// meter dentro de la funcion y otra función que borre a los hijos (.children)
-	//  alumnos.forEach((item)=>{
-	//      let li = document.createElement("li");
-	//      li.innerText = item;
-	//      listaVivos.appendChild(li);});
-};
-
-
 //! seleccionar a una victima dentro de el array alumnos
 function matar() {
 	//* Genera un NUMERO aleatorio teniendo en cuenta el total de valores en el array de alumnos
@@ -165,7 +162,7 @@ function matar() {
 	console.log(`${aletorio} es ${alumnos[aletorio]}`);
 
 	//* si hay victimas en el ritual
-	if (alumnos.length > 0) {
+	if(alumnos.length > 0) {
 		//* Restador de array
 		let eliminar = alumnos.splice(aletorio, 1);
 
@@ -189,5 +186,82 @@ function matar() {
 	}
 }
 
+
+function CrearlistaMuertos(){
+if( muertos.length > 0){
+
+
+
+/* 
+muertos.forEach((item)=>{
+    //* crear elemenots li en el html
+    let li = document.createElement("li");  */
+
+
+for (let index = 0; index < muertos.length; index++) {
+
+if( muertos.length -1 == index ){
+
+  if( muertos[index] != noRepetir){
+
+    noRepetir = muertos[index];
+    let li = document.createElement("li"); 
+    li.textContent  = muertos[index];
+    ulListaMuertos.appendChild(li);
+  }
+}
+  
+}
+
+/* muertos.map((item)=>{
+  //* crear elemenots li en el html
+  
+  let li = document.createElement("li"); 
+    console.log("1 ", li );
+    console.log("1 ", item );
+
+    //* añade valor dentro de li
+    li.textContent  = item;
+
+
+    //** añadelo al html */
+   /*  ulListaMuertos.remove
+
+    ulListaMuertos.appendChild(li);
+   
+    console.log("2 ",ulListaMuertos.appendChild(li));
+    console.log("2 ",item); */
+
+ //.concat()
+  
+  /* });  */ 
+   
+ /*  } */
+ 
+}
+}
+
+const render = () => {
+	//* evento de sacrificio en button kill
+	buttonKill.addEventListener('click', onClickMatar);
+	buttonNext.addEventListener('click', onClickNext);
+
+	//* evento de añadir con el button add
+	buttonAdd.addEventListener('click', onClickAdd);
+  CrearlistaMuertos();
+
+
+
+  
+	// Recorrer el Array alumnos
+
+	// meter dentro de la funcion y otra función que borre a los hijos (.children)
+	//  alumnos.forEach((item)=>{
+	//      let li = document.createElement("li");
+	//      li.innerText = item;
+	//      listaVivos.appendChild(li);});
+};
+
 //! MAIN //
 render();
+
