@@ -1,5 +1,5 @@
 .home-green{
-    background-color: #83C9A1;
+    background-color: var(--verde-light);
 }
 .home{
     display: flex;
@@ -8,15 +8,26 @@
     align-items: center;
 }
 
-.home .home-img{
+.home-img{
     margin-top: 70px;
     width: 72%;
+    justify-content: center;
 }
 
 .home-paragraph{
-    margin: 50px 50px;
+   
+    margin-right: auto;
+	margin-left: auto;
+	padding: 0 1rem;
+    text-align: justify;
 }
-
+.cavalera-home{
+    width: 320px;
+    height: 100px;
+    animation: bounce 1.5s alternate infinite linear;
+    margin-top: 6px;
+    opacity: 70%;
+}
 .home-button{
     display: flex;
     justify-content: center;
@@ -25,11 +36,11 @@
     width: 294px;
     height: 52px;
     opacity: 90%;
-    border: 10px solid rgba(7, 148, 68, .8);
+    border: 10px solid var(--verde);
 }
 
 .home-button div{
-    background-color: rgba(255, 204, 2, 0.5);
+    background-color: var(--amarillo-light);
     width: 284px;
     height: 32px;
     display: flex;
@@ -50,7 +61,20 @@
 }
 
 .img-pegi{
-    margin-top: 70px;
     margin-left: 40px;
     width: 10%;
+}
+@-webkit-keyframes bounce {
+    from {-webkit-transform: rotate(4deg)}
+    to   {-webkit-transform: rotate(-4deg)}
+}
+
+@keyframes bounce {
+    from {transform: rotate(4deg)}
+    to   {transform: rotate(-4deg)}
+}
+
+#cavalera-home {
+    -webkit-animation: bounce .5s alternate infinite ease-in-out;
+            animation: bounce .5s alternate infinite ease-in-out;
 }
