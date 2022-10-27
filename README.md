@@ -1,8 +1,7 @@
+# Wheel of Doom
 
-<div style="display:flex; align-items:center;">
-<h1>Wheel of Doom</h1>
 <img style="margin-left:auto;" src="https://factoriaf5.org/wp-content/uploads/2021/07/logo.png">
-</div>
+
 
 <hr>
 
@@ -15,4 +14,8 @@
 - Alejandro Buriticá Rodríguez
 - Cristian Damaso Calderon Rojas
 - Mario Alberto Valdés Centurión
+
+
+
+
 
