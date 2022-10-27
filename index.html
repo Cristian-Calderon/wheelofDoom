@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/iconos/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/main.css">
-    <title>Java Aztec</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="./assets/iconos/favicon.png" type="image/x-icon" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Java Aztec</title>
+	</head>
+	<body class="home-green">
+		<main class="home">
+			<section class="container">
+				<img class="home-img" src="./assets/logo/logo-white.png" alt="Java Aztec" />
+				<div class="home-paragraph">
+					<p>
+						Los aztecas vivían en el Quinto Sol o Sol de Movimiento, en el que habían sido creados el hombre y el maíz,
+						creían que de estos dependía que el Universo siguiera existiendo porque si el Astro Rey no se alimentaba no
+						tendría fuerza para mantenerse vivo así que en orden de evitar su muerte se realizaban sacrificios humanos
+						ofreciendo la sangre a los dioses, lo cual daba energía vital. Así, hombres, mujeres y niños... todos
+						ofrecían su vida para complacer a los dioses y mantener el equilibrio en el Universo.
+					</p>
+						<p>
+						Hoy ofrecemos nuestros mejores coders a los dioses Tech.
+					</p>
+				</div>
+				<div class="home-button">
+					<div>
+						<a class="button btn-inicio" href="./main.html">INICIAR RITUAL</a>
+					</div>
+				</div>
+				<div class="home-pegi">
+					<img class="img-pegi" src="./assets/iconos/pegi.png" alt="" />
+				</div>
 
-
-</head>
-<body class="home-green">
-    <main class="home">   
-
-        <img class="home-img" src="./assets/logo/logo-white.png" alt="Java Aztec">
-        <div class="home-paragraph">
-            <p>Los aztecas vivían en el Quinto Sol o Sol de Movimiento, en el que habían sido creados el hombre y el maíz, creían que de estos dependía que el Universo siguiera existiendo porque si el Astro Rey no se alimentaba no tendría fuerza para mantenerse vivo así que en orden de evitar su muerte se realizaban sacrificios humanos ofreciendo la sangre a los dioses, lo cual daba energía vital. Así, hombres, mujeres y niños... todos ofrecían su vida para complacer a los dioses y mantener el equilibrio en el Universo. <br> <br> <br> Hoy ofrecemos nuestros mejores coders a los dioses Tech.</p>
-
-        </div>
-        <div class="home-button">
-            <div>
-                <a class="button btn-inicio" href="./main.html">INICIAR RITUAL</a>
-            </div>
-        </div>
-        <div class="home-pegi">
-            <img class="img-pegi" src="./assets/iconos/pegi.png" alt="">
-        </div>
-        <audio src="./Assets/Audio/tambor1.wav" autoplay loop ></audio>
-
-    </main>
-    
-</body>
-
+				<audio id="tambor" autoplay loop >
+					<source src="./Assets/Audio/tambor1.wav" type="audio/mpeg" />
+					tu navegador no es compatible con el formato de audio
+				</audio>
+			</section>
+		</main>
+	</body>
 </html>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function (event) {
+		let audio = document.getElementById('tambor');
+		audio.volume = 0.05;
+	});
+</script>
