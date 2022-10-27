@@ -3,29 +3,32 @@
 img {width: 100%;}
 
 .animacion{
-    background-color: var(--texto);
-    margin-bottom: 6rem;
+    background-image: url("..//Assets/Imagenes/background.png");
+    /* margin-bottom: 6rem; */
     
 }
-ul {
+
+ul{
     list-style: none;
     height: 100px;
     width: 100%;
-    /* list-style-image: url(../Assets/Imagenes/huesos.png); */ 
+    /* list-style-image: url(../Assets/Imagenes/huesos.png); */
     overflow: scroll;
 }
 
 
-li{
+li {
     background-color: var(--amarillo-light);
     margin-bottom: 1rem;
 }
 
 
 .listas{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-items: center;  
+    justify-items: center;
+    background-color: var(--verde-dark);
 }
 
    
@@ -33,14 +36,14 @@ li{
    
     border: 25px solid transparent;
     border-image: url(../Assets/Imagenes/border-bottomG.png) 100 round;
-    background-color: var(--texto);
+    background-color: var(--verde-light);
     color:var(--texto);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 5rem;  
+    margin-bottom: 2rem;  
     
 }
     .tipo{
-        color: var(--amarillo);
+        color: var(--texto);
         text-align:center;
         width: 100%;
     }
@@ -82,7 +85,7 @@ li{
 
 
 .lista-sacrificados{
-    background-color: var(--texto);
+    background-color: var(--verde-light);  
     color: var(--rojo-light);
     border: 30px solid transparent;
     border-image:  url(../Assets/Imagenes/border-bottomD.png) 100 round;
@@ -92,23 +95,34 @@ li{
 }
 
 .tipo2{
-        color: var(--rojo-light);
+        color: var(--texto);
         text-align:center;
         width: 100%;
 }
 
 
+.caja-calavera {
+    background-color: var(--verde-dark);
+    margin: 1rem;
+}
   .calavera{
-    width: 100px;
-    height: 100px;
-    position: relative;
-    animation: myfirst 5s linear 2s infinite alternate;
+    width: 50px;
+    height: 50px;
+    position:sticky;
+    animation: myfirst 6s ease-in 5s infinite alternate;
   }
   
   @keyframes myfirst {
+       
     0%   { left:0px; top:0px;}
-    25%  { left:200px; top:0px;}
-    50%  { left:500px; top:0px;}
-    75%  { left:200px; top:0px;}
-    100% { left:0px; top:0px;}
+    10%  { left:200px; top:0px;}
+    20%  { left:400px; top:0px;}
+    30%  { left:600px; top:0px;}
+    40%  { left:800px; top:0px;}
+    50%  { left:1000px; top:0px;}
+    60%  { left:1200px; top:0px;}
+    70%  { left:1400px; top:0px;}
+    80%  { left:1600px; top:0px;}
+    90%  { left:1800px; top:0px;}
+    100% { left:2000px; top:0px;}
   }
