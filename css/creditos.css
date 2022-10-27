@@ -4,6 +4,7 @@
 
 .creditos-lista{
     list-style: none;
+    height: 200px;
 }
 
 .creditos-main{
@@ -16,11 +17,13 @@
 .credito-piramide{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
 }
 
 .credito-piramide img{
     width: 80%;
+    height: 80%;
+   
 }
 
 .credito-footer{
@@ -30,4 +33,40 @@
 
 .credito-img{
     position: absolute;
+}
+.craneo-img{
+    width: 204px;
+    height:200px;
+}
+.craneo{
+    position: absolute;
+    left: 350px;
+    top: 50px;
+    -webkit-animation: cavalera 7s linear 0s infinite; /* Animación de llamada */
+}
+/* Definir animación*/
+@-webkit-keyframes cavalera {
+  
+    0%{
+/* Prepárate para caer en el cielo opacidad (transparencia) */
+        opacity: 0;
+/* Mover, rotar y cada atributo de estilo de estado debe corresponder uno a uno */
+/* Un elemento puede tener múltiples transformaciones separadas por espacios */
+        transform: rotate(0deg) translate(50,0);
+    }
+    30%{
+/* Cae en el aire */
+        opacity: 1;
+        transform: rotate(5deg) translate(500px,180px);
+    }
+    60%{
+/* Cayó bajo tierra */
+        opacity: 0.5;
+        transform: rotate(10deg) translate(600px,660px);
+    }
+    100%{
+/* Utilice el tiempo correspondiente a 60-100 para simular la espera */
+        opacity: 0;
+        transform: rotate(10deg) translate(700px,760px);
+    }
 }
