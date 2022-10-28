@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Java Aztec - Créditos</title>
 </head>
-<body class="creditos-container">
+<body class="creditos">
     
     <main class="creditos-main">
 
     <section class="container">
         <div class="equipocreditos">
-                <h1>Creditos Finales</h1>
+                <h1 class="creditosFinales">Creditos Finales</h1>
                 <h3> Equipo 5 soles</h3>
                 <ul class="creditos-lista">
                     <li>Mario Valdes</li>
@@ -28,17 +28,30 @@
        
     </main>
     <main>
-    <section class="credito-piramide">
+    <div class="credito-piramide">
         <img src="./Assets/Imagenes/piramidecreditos.svg" alt="piramide">
-    </section>
-    <div class="craneo">
-        <img class="craneo-img" src="./Assets/Imagenes/calavera(2).svg">
     </div>
+    
+
+    
+   
+   
+   
     </main>
     
     <footer class="credito-footer">
-        <img class="credito-img" src="./Assets/Imagenes/colinalight.svg" alt="colina verde de footer">
-        <img class="credito-img-dark" src="./Assets/Imagenes/colinadark.svg" alt="colina verde oscura de footer">
+        <img class="credito-img" src="./Assets/Imagenes/GroupColina(1).svg" alt="colina verde de footer">
+       
     </footer>
+    <audio id="tambor" autoplay loop >
+        <source src="./Assets/Audio/tambor1.wav" type="audio/mpeg" />
+        tu navegador no es compatible con el formato de audio
+    </audio>
 </body>
 </html>
+<script>
+    document.addEventListener('DOMContentLoaded', function (event) {
+        let audio = document.getElementById('tambor');
+        audio.volume = 0.03;
+    });
+</script>

@@ -1,5 +1,5 @@
-.creditos-container{
-    background-color: var(--verde);
+.creditos{
+    background-color: var(--verde-light);
 }
 
 .creditos-lista{
@@ -21,10 +21,14 @@
 }
 
 .credito-piramide img{
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
    
 }
+.creditosFinales{
+    font-size: 2em;
+}
+
 
 .credito-footer{
     display: flex;
@@ -34,39 +38,54 @@
 .credito-img{
     position: absolute;
 }
-.craneo-img{
-    width: 204px;
-    height:200px;
+.creditos{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation-delay: 1s;
 }
-.craneo{
+/*add lluvia con  opacity 0*/
+.creditos:before {
+    content: ""; /*es lo que hace la llhuvia*/
     position: absolute;
-    left: 350px;
-    top: 50px;
-    -webkit-animation: cavalera 7s linear 0s infinite; /* Animación de llamada */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(
+https://media.geeksforgeeks.org/wp-content/uploads/20200828184719/rain-300x300.png);
+    animation: rain 0.4s linear infinite;
+    opacity: 0;
 }
-/* Definir animación*/
-@-webkit-keyframes cavalera {
-  
-    0%{
-/* Prepárate para caer en el cielo opacidad (transparencia) */
-        opacity: 0;
-/* Mover, rotar y cada atributo de estilo de estado debe corresponder uno a uno */
-/* Un elemento puede tener múltiples transformaciones separadas por espacios */
-        transform: rotate(0deg) translate(50,0);
-    }
-    30%{
-/* Cae en el aire */
+/* just changing the position of image 
+of rain using keyframes*/
+@keyframes rain {
+    0% {
+        background-position: 0 0;
         opacity: 1;
-        transform: rotate(5deg) translate(500px,180px);
     }
-    60%{
-/* Cayó bajo tierra */
-        opacity: 0.5;
-        transform: rotate(10deg) translate(600px,660px);
-    }
-    100%{
-/* Utilice el tiempo correspondiente a 60-100 para simular la espera */
-        opacity: 0;
-        transform: rotate(10deg) translate(700px,760px);
+
+    100% {
+        background-position: 8% 80%;
+        opacity: 1;
     }
 }
+/* applying filter at different angle
+on diffrent interval using keyframe*/
+@keyframes color-change {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+
+
