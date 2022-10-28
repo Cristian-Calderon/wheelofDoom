@@ -8,13 +8,6 @@
     align-items: center;
 }
 
-.home-cont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .home .home-img{
     margin-top: 70px;
     width: 72%;
