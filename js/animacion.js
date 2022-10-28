@@ -12,8 +12,12 @@ const buttonAdd = document.getElementById('add');
 
 // * lista de muertos
 const ulListaMuertos = document.getElementById("muertos");
+const ulListaVivos = document.getElementById("vivos");
+
+
 
 let noRepetir;
+let noRepetirVivos;
 
 const muertos = []; //cada valor que yo le pase a [] va a ser un valor de un array
 
@@ -190,14 +194,6 @@ function matar() {
 function CrearlistaMuertos(){
 if( muertos.length > 0){
 
-
-
-/* 
-muertos.forEach((item)=>{
-    //* crear elemenots li en el html
-    let li = document.createElement("li");  */
-
-
 for (let index = 0; index < muertos.length; index++) {
 
 if( muertos.length -1 == index ){
@@ -212,34 +208,23 @@ if( muertos.length -1 == index ){
 }
   
 }
-
-/* muertos.map((item)=>{
-  //* crear elemenots li en el html
-  
-  let li = document.createElement("li"); 
-    console.log("1 ", li );
-    console.log("1 ", item );
-
-    //* añade valor dentro de li
-    li.textContent  = item;
-
-
-    //** añadelo al html */
-   /*  ulListaMuertos.remove
-
-    ulListaMuertos.appendChild(li);
-   
-    console.log("2 ",ulListaMuertos.appendChild(li));
-    console.log("2 ",item); */
-
- //.concat()
-  
-  /* });  */ 
-   
- /*  } */
  
 }
 }
+
+function Crearlistavivos(){
+	if( alumnos.length > 0){
+	
+	for (let index = 0; index < alumnos.length; index++) {
+	
+		let li = document.createElement("li"); 
+		li.textContent  = alumnos[index];
+		ulListaVivos.appendChild(li);
+	}
+	
+
+	}
+	}
 
 const render = () => {
 	//* evento de sacrificio en button kill
@@ -249,17 +234,7 @@ const render = () => {
 	//* evento de añadir con el button add
 	buttonAdd.addEventListener('click', onClickAdd);
   CrearlistaMuertos();
-
-
-
-  
-	// Recorrer el Array alumnos
-
-	// meter dentro de la funcion y otra función que borre a los hijos (.children)
-	//  alumnos.forEach((item)=>{
-	//      let li = document.createElement("li");
-	//      li.innerText = item;
-	//      listaVivos.appendChild(li);});
+  Crearlistavivos();
 };
 
 //! MAIN //

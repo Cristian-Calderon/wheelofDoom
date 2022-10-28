@@ -10,9 +10,11 @@
 	</head>
 	<body class="home-green">
 		<main class="home">
-			<section class="container">
+			<section class="container home">
 				<img class="home-img" src="./assets/logo/logo-white.png" alt="Java Aztec" />
+				<img src="./Assets/Imagenes/calavera(2).svg" class="cavalera-home" alt="cavalera">
 				<div class="home-paragraph">
+					
 					<p>
 						Los aztecas vivían en el Quinto Sol o Sol de Movimiento, en el que habían sido creados el hombre y el maíz,
 						creían que de estos dependía que el Universo siguiera existiendo porque si el Astro Rey no se alimentaba no
@@ -23,7 +25,9 @@
 						<p>
 						Hoy ofrecemos nuestros mejores coders a los dioses Tech.
 					</p>
+				
 				</div>
+				
 				<div class="home-button">
 					<div>
 						<a class="button btn-inicio" href="./main.html">INICIAR RITUAL</a>
@@ -33,19 +37,18 @@
 					<img class="img-pegi" src="./assets/iconos/pegi.png" alt="" />
 				</div>
 
-				<audio id="tambor" autoplay loop>
+				<audio id="tambor" autoplay loop >
 					<source src="./Assets/Audio/tambor1.wav" type="audio/mpeg" />
 					tu navegador no es compatible con el formato de audio
 				</audio>
 			</section>
 		</main>
 	</body>
+</html>
+
 	<script>
 		document.addEventListener('DOMContentLoaded', function (event) {
 			let audio = document.getElementById('tambor');
-			audio.volume = 0.05;
+			audio.volume = 0.01;
 		});
 	</script>
-</html>
-
-
